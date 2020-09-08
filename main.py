@@ -57,13 +57,12 @@ print(corr)
 
 
 
-# names = data[data['Sex'] == 'female']['Name']
-# print(names)
-# print()
-#
-# names = data[data['Sex'] == 'female']['Name'].apply(
-#     lambda r: r.split(',')[1])
-# print(names.value_counts().head())
-# name = '[Mrs., William, (Margaret, Norton)]'
-# print()
-# print(name.split(','))
+names = data[data['Sex'] == 'female']['Name']
+print(names)
+print()
+
+names = data[data['Sex'] == 'female']['Name'].apply(
+    lambda r: r.split(',')[1].split()[1]
+)
+print(names.value_counts().head())
+
