@@ -39,4 +39,11 @@ pprint(X.info())
 
 # 6) Обучите решающее дерево с параметром random_state=241 и остальными параметрами по умолчанию.
 
+from sklearn.tree import DecisionTreeClassifier
+tree = DecisionTreeClassifier(random_state=241)
+tree.fit(np.array(X.values), np.array(y.values))
+
+# 7) Вычислите важности признаков и найдите два признака с наиболь- шей важностью.
+# Их названия будут ответами для данной задачи (в качестве ответа укажите названия признаков через запятую без пробелов)
+
 
