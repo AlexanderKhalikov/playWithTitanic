@@ -46,4 +46,5 @@ tree.fit(np.array(X.values), np.array(y.values))
 # 7) Вычислите важности признаков и найдите два признака с наиболь- шей важностью.
 # Их названия будут ответами для данной задачи (в качестве ответа укажите названия признаков через запятую без пробелов)
 
-
+importances = pd.Series(tree.feature_importances_, index=x_labels)
+pprint(importances.sort_values(ascending=False))
